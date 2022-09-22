@@ -1,0 +1,63 @@
+.navBarp{
+    display: flex;
+    background-color: #B6DCFF;
+    padding: 30px;
+}
+
+.buttons {
+    display: flex;
+}
+
+.navBarp img {
+    height: 2em;
+    width: 2em;
+    margin-left: 4em;
+    margin-right: 4em;
+    margin-top: 12px;
+}
+
+.navBarp h3{
+    color: black;
+    font-size: 1.5em;
+    margin:10px 0 0 3em;
+}
+
+.search{
+    border-radius: 10px;
+    background-color: white;
+    text-align: left;
+    font-size: 1em;
+    height: 40px;
+    width: 18vw;
+    padding: 0 10px;
+    margin-left: auto;
+    margin-top: 10px;
+    border: none;
+    outline: none;
+}
+
+.search:active{
+    border: none;
+    outline:none;
+}
+
+.mova{
+    display: flex;
+    margin-top: -10px;
+    margin-left: 50px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 15px;
+}
+.mova h2{
+    font-size: 3em;
+    color: #fdc692;
+    margin: 0;
+    line-height: 30px;
+}
+.mova h3{
+    color: #80c1ff;
+    font-size: 3em;
+    margin: 0;
+    line-height: 30px;
+}

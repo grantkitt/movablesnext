@@ -1,0 +1,140 @@
+.holder{
+    padding: 40px;
+    display: flex;
+}
+
+.previewp img {
+    width: 200px;
+    border-radius: 20px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.previewp{
+    display: flex;
+    flex-direction: column;
+}
+
+.selectedImage{
+    height: 500px;
+    border-radius: 50px;
+    margin-left: 50px;
+    border: black 3px solid;
+}
+
+.block1{
+    display: flex;
+}
+
+.titleBlock{
+    padding: auto;
+    width: 100%;
+}
+
+.title h1 {
+    text-align: center;
+    font-size: 2.5em;
+    color: black;
+    margin: 0;
+    text-transform: capitalize;
+
+}
+.title{
+    margin-left: 50px;
+    margin-bottom: 20px;
+    width: 100%;
+    display: flex;
+}
+.title h2{
+    margin: 9px;
+    height: 30px;
+    font-size: 2em;
+    color: grey;
+}
+
+.titleBlock p{
+    color: gray;
+    font-size: 1.2em;
+    text-align: left;
+    padding: 10px 100px 20px 50px;
+    margin: 0;
+}
+
+.paymentBlock{
+    margin-left: 50px;
+    text-align: left;
+}
+
+.paymentBlock h3{
+    margin: 0;
+    color: red;
+    font-size: 0.9em;
+}
+.cart {
+    text-align: center;
+    font-size: 1em;
+    width: 500px;
+    border: black 3px solid;
+    padding: 10px;
+    margin: 10px 0;
+    cursor: pointer;
+}
+.buy {
+    text-align: center;
+    font-size: 1em;
+    width: 500px;
+    border: black 3px solid;
+    background-color: black;
+    color: white;
+    padding: 10px;
+    margin: 0;
+    cursor: pointer; 
+}
+.block2{
+    margin-top: 40px;
+    margin-left: 50px;
+}
+.ship{
+    padding: 20px;
+    width: 90%;
+    height: 140px;
+    border-radius: 20px;
+    background-color: #FFD3AB;
+}
+.shipRow{
+    display: flex;
+}
+.shipRow img {
+    height: 35px;
+}
+.shipRow h4{
+    font-size: 1.2em;
+    margin: 5px 10px;
+}
+.ship p{
+    font-size: 1.1em;
+    color: black;
+}
+
+.return{
+    margin-top: 20px;
+    padding: 20px;
+    width: 90%;
+    height: 140px;
+    border-radius: 20px;
+    background-color: #B6DCFF;
+}
+.returnRow{
+    display: flex;
+}
+.returnRow img {
+    height: 35px;
+}
+.returnRow h4{
+    font-size: 1.2em;
+    margin: 5px 10px;
+}
+.return p{
+    font-size: 1.1em;
+    color: black;
+}
