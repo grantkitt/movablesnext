@@ -17,9 +17,9 @@ const Footer = () => {
   return (
     <div className="bg-orange-200 pb-16">
         <div className="flex flex-row px-32 py-12">
-        {types.map(type => {
+        {types.map((type, index) => {
             return (
-                <div className="w-96 mx-auto">
+                <div className="w-96 mx-auto" key={index}>
                     <h4 className="text-center text-2xl font-semibold h-12">{type.type}</h4>
                     <img src={type.image} alt={type.type} className='rounded-xl shadow-2xl h-96' />
                 </div>

@@ -1,3 +1,4 @@
+import Link from "next/link";
 const DogSlide = () => {
   return (
     <div className="bg-couchDog w-full bg-no-repeat bg-cover p-40" style={{height: '1000px'}}>
@@ -5,9 +6,9 @@ const DogSlide = () => {
             <h2 className="text-3xl text-medium ">
                 The best options for your best friends.
             </h2>
-            <a href="">
+            <Link href="/catalog">
             <p className="mt-10 p-5 rounded-xl bg-white shadow-2xl border-4 border-blue-200">Shop Today</p>
-            </a>
+            </Link>
             
         </div>
     </div>

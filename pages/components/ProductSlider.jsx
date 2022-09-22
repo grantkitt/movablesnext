@@ -1,5 +1,6 @@
 import { Splide, SplideSlide } from 'splide-nextjs/react-splide';
 import 'splide-nextjs/splide/dist/css/themes/splide-default.min.css';
+import Link from 'next/link';
 
 const ProductSlider = ({products}) => {
   return (
@@ -13,12 +14,12 @@ const ProductSlider = ({products}) => {
         <Splide options={{
             perPage: 3,
         }}>
-            {products.map(product => {
+            {products.map((product, index) => {
                 return (
-                    <SplideSlide>
-                        <a href={`/product/${product.slug}`}>
+                    <SplideSlide key={index}>
+                        <Link href={`/product/${product.slug}`}>
                         <img src={product.imageSrc} alt="carousel item" className='h-80 rounded-2xl border-black border-4 mx-auto'/>
-                        </a>
+                        </Link>
                     </SplideSlide>
                 )
             })}
