@@ -4,7 +4,7 @@ import ProductSlider from "../components/ProductSlider"
 import handler from "../api/products";
 export async function getStaticPaths() {
   const url = new URL(process.env.URL || 'http://localhost:3000')
-  const res = await handler()
+  const res = await fetch('http://localhost:3000/api/products');
     
     if (!res.ok) {
       console.error(res);
@@ -12,18 +12,21 @@ export async function getStaticPaths() {
     }
      //filter on quantity is over 0
   // lol
-     const data = await res.json();
-
-     return {
-        paths: data.data.products.edges.map(({node}) => `/product/${node.handle}`),
-        fallback: true,
-     }
+    const data = await res.json();
+    console.log(data.data.products.edges[0])
+    const paths = data.data.products.edges.map(({node}) => {
+     return {params: {slug: node.handle}}
+    }) 
+    return { 
+      paths: paths,
+      fallback: false,
+    }
 }
 
 export async function getStaticProps(...args) {
 
     const url = new URL(process.env.URL || 'http://localhost:3000')
-    const res = await handler()
+    const res = await fetch('http://localhost:3000/api/products');
     
     if (!res.ok) {
       console.error(res);

@@ -5,17 +5,13 @@ import EmailSection from './components/emailSection'
 import Footer from './components/footer'
 import handler from './api/products'
 export async function getStaticProps() {
-  const url = new URL(process.env.URL || 'http://localhost:3000')
-  const res = await handler();
-
-  if (!res.ok) {
-    console.error(res);
-    return {props: {}}
-  }
+  // const url = new URL(process.env.URL || 'http://localhost:3000')
+  // url.pathname = '/api/products'
+  const res = await fetch('http://localhost:3000/api/products');
+  
+  
    //filter on quantity is over 0
-
-   const data = await res.json();
-
+  const data = await res.json();
   const products = data.data.products.edges.map(({node}) => {
     if (node.totalInventory <= 0 ) {
       return false;
@@ -30,10 +26,10 @@ export async function getStaticProps() {
       slug: node.handle,
     }
   }).filter(Boolean)
-
+  console.log('ttttttttttt')
   return {
     props: {
-      products
+      products,
     }
   }
 }

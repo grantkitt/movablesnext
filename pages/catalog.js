@@ -2,8 +2,9 @@ import ProductBar from './components/productBar'
 import CatalogDisplay from './components/CatalogDisplay'
 import handler from "./api/products";
 export async function getStaticProps() {
-    const url = new URL(process.env.URL || 'http://localhost:3000')
-    const res = await handler();
+  const url = new URL(process.env.URL || 'http://localhost:3000')
+  url.pathname = '/api/products'
+  const res = await fetch('http://localhost:3000/api/products');
   
     if (!res.ok) {
       console.error(res);
@@ -11,7 +12,7 @@ export async function getStaticProps() {
     }
      //filter on quantity is over 0
   
-     const data = await res.json();
+    const data = await res.json();
   
     const products = data.data.products.edges.map(({node}) => {
       if (node.totalInventory <= 0 ) {
