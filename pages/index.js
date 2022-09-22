@@ -5,7 +5,8 @@ import EmailSection from './components/emailSection'
 import Footer from './components/footer'
 export async function getStaticProps() {
   const url = new URL(process.env.URL || 'http://localhost:3000')
-  const res = await fetch(`${url}api/products`);
+  url.pathname = '/api/products'
+  const res = await fetch(url);
 
   if (!res.ok) {
     console.error(res);

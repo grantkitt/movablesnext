@@ -3,7 +3,8 @@ import ProductDisplay from "../components/productDisplay";
 import ProductSlider from "../components/ProductSlider"
 export async function getStaticPaths() {
   const url = new URL(process.env.URL || 'http://localhost:3000')
-  const res = await fetch(`${url}api/products`);
+  url.pathname = '/api/products'
+  const res = await fetch(url);
     
     if (!res.ok) {
       console.error(res);
@@ -15,14 +16,15 @@ export async function getStaticPaths() {
 
      return {
         paths: data.data.products.edges.map(({node}) => `/product/${node.handle}`),
-        fallback: true,
+        fallback: false,
      }
 }
 
 export async function getStaticProps(...args) {
 
     const url = new URL(process.env.URL || 'http://localhost:3000')
-    const res = await fetch(`${url}api/products`);
+    url.pathname = '/api/products'
+    const res = await fetch(url);
     
     if (!res.ok) {
       console.error(res);
