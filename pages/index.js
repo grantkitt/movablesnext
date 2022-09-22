@@ -26,7 +26,6 @@ export async function getStaticProps() {
       slug: node.handle,
     }
   }).filter(Boolean)
-  console.log('ttttttttttt')
   return {
     props: {
       products,
