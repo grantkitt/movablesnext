@@ -2,7 +2,9 @@ import ProductBar from "../components/productBar";
 import ProductDisplay from "../components/productDisplay";
 import ProductSlider from "../components/ProductSlider"
 export async function getStaticPaths() {
-    const res = await fetch('http://localhost:3000/api/products');
+  const url = new URL(process.env.URL || 'http://localhost:3000')
+  url.pathname = '/api/products';
+  const res = await fetch(url.pathname.toString());
     
     if (!res.ok) {
       console.error(res);
@@ -22,7 +24,7 @@ export async function getStaticProps(...args) {
 
     const url = new URL(process.env.URL || 'http://localhost:3000')
     url.pathname = '/api/products';
-    const res = await fetch('http://localhost:3000/api/products');
+    const res = await fetch(url.pathname.toString());
     
     if (!res.ok) {
       console.error(res);
