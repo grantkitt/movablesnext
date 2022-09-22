@@ -1,9 +1,9 @@
 import ProductBar from './components/productBar'
 import CatalogDisplay from './components/CatalogDisplay'
+import handler from "./api/products";
 export async function getStaticProps() {
     const url = new URL(process.env.URL || 'http://localhost:3000')
-    url.pathname = '/api/products'
-    const res = await fetch(url);
+    const res = await handler();
   
     if (!res.ok) {
       console.error(res);
