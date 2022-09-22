@@ -11,12 +11,12 @@ export async function getStaticPaths() {
       return {props: {}}
     }
      //filter on quantity is over 0
-  
+  // lol
      const data = await res.json();
 
      return {
         paths: data.data.products.edges.map(({node}) => `/product/${node.handle}`),
-        fallback: false,
+        fallback: true,
      }
 }
 
