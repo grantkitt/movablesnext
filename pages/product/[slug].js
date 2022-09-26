@@ -152,8 +152,8 @@ export async function getStaticProps(...args) {
 
   return {
     props: {
-      product,
-      products
+      product: product || null,
+      products: products || null
     }
   }
 }
