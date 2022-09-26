@@ -67,7 +67,7 @@ export async function getStaticProps() {
       imageSrc: node.images.edges[0].node.src,
       imageAlt: node.title,
       price: node.variants.edges[0].node.priceV2.amount,
-      slug: node.handle,s
+      slug: node.handle,
     }
   }).filter(Boolean)
 
