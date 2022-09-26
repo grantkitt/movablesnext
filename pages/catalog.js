@@ -1,5 +1,5 @@
-import ProductBar from './components/productBar'
-import CatalogDisplay from './components/CatalogDisplay'
+import ProductBar from '../components/productBar'
+import CatalogDisplay from '../components/CatalogDisplay'
 import { useEffect, useState } from 'react'
 
 export default function Catalog({}) {

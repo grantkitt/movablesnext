@@ -1,8 +1,8 @@
-import WomanHeader from './components/womanHeader'
-import ItemSlider from './components/itemSlider'
-import DogSlide from './components/dogSlide'
-import EmailSection from './components/emailSection'
-import Footer from './components/footer'
+import WomanHeader from '../components/womanHeader'
+import ItemSlider from '../components/itemSlider'
+import DogSlide from '../components/dogSlide'
+import EmailSection from '../components/emailSection'
+import Footer from '../components/footer'
 import { useState, useEffect } from 'react'
 // export async function getStaticProps() {
 //   const url = new URL(process.env.URL || 'http://localhost:3000')

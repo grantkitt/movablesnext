@@ -1,8 +1,7 @@
 // import { useEffect } from "react";
-import { useEffect, useState } from "react";
-import ProductBar from "../components/productBar";
-import ProductDisplay from "../components/productDisplay";
-import ProductSlider from "../components/ProductSlider"
+import ProductBar from "../../components/productBar";
+import ProductDisplay from "../../components/productDisplay";
+import ProductSlider from "../../components/ProductSlider"
 import { postToShopify } from "../../utils/shopify";
 export async function getStaticPaths() {
   const res = await postToShopify({
