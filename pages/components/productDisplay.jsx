@@ -18,10 +18,10 @@ const ProductDisplay = ({product}) => {
             <img src={theImg} alt="the selected furnature of choice" className="border-4 border-black rounded-3xl" style={{height: '500px'}}/>
             <div className="pl-8" style={{width: '680px'}}>
                 <div className="mb-5 flex" style={{width: '600px'}}>
-                    <h1 className="text-center text-black text-bold font-bold text-5xl">{product.title}</h1>
-                    <h2 className="text-gray-800 text-3xl font-medium mt-3 ml-auto">${product.price}</h2>
+                    <h1 className="text-center text-black text-bold font-bold text-5xl">{product?.title}</h1>
+                    <h2 className="text-gray-800 text-3xl font-medium mt-3 ml-auto">${product?.price}</h2>
                 </div>
-                <p className="text-justify font-semibold text-gray-600 text-xl">{product.description}</p>
+                <p className="text-justify font-semibold text-gray-600 text-xl">{product?.description}</p>
                 <div className="mt-5 text-left">
                     <h3 className='text-red-600 font-semibold ml-16'>1 in stock</h3>
                     <h4 className="p-1 mx-auto text-center border-4 border-black text-xl font-semibold mt-1 cursor-pointer" style={{width: '520px'}}>Add to cart</h4>
