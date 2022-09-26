@@ -6,8 +6,7 @@ const ItemSlider = ({products}) => {
   return (
     <div className="bg-blue-200 pt-10 ">
         <h1 className='text-6xl font-bold  mt-2 text-center mb-10'>Timeless, Sexy, Vintage.</h1>
-        {/* <img src={products[0].imageSrc} alt="" /> */}
-        {/* <Splide options={{
+        <Splide options={{
             perPage: 3,
         }}>
             
@@ -20,7 +19,7 @@ const ItemSlider = ({products}) => {
                 </SplideSlide>
             )
         })}
-        </Splide> */}
+        </Splide>
     </div>
   )
 }

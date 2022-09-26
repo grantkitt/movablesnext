@@ -16,7 +16,7 @@ const ProductSlider = ({products}) => {
         }}>
             {products.map((product, index) => {
                 return (
-                    <SplideSlide key={index}>
+                    <SplideSlide key={index} >
                         <Link href={`/product/${product.slug}`}>
                         <img src={product.imageSrc} alt="carousel item" className='h-80 rounded-2xl border-black border-4 mx-auto'/>
                         </Link>
