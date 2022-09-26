@@ -52,7 +52,7 @@ export async function getStaticProps() {
       }`,
     variables: {}
   });
-
+  // uh
   
    //filter on quantity is over 0
 
@@ -67,7 +67,7 @@ export async function getStaticProps() {
       imageSrc: node.images.edges[0].node.src,
       imageAlt: node.title,
       price: node.variants.edges[0].node.priceV2.amount,
-      slug: node.handle,
+      slug: node.handle,s
     }
   }).filter(Boolean)
 
