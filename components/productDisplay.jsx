@@ -1,6 +1,10 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+
 const ProductDisplay = ({product}) => {
     const [theImg, setImg] = useState(product?.imageSrcs[0]?.image);
+    useEffect(() => {
+        setImg(product?.imageSrcs[0]?.image)
+    }, [])
     const change = (e, item) => {
         setImg(item);
     }
