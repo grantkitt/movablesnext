@@ -1,13 +1,13 @@
 import { useState } from "react";
 const ProductDisplay = ({product}) => {
-    const [theImg, setImg] = useState(product.imageSrcs[0].image);
+    const [theImg, setImg] = useState(product?.imageSrcs[0]?.image);
     const change = (e, item) => {
         setImg(item);
     }
   return (
     <div className="holder p-10 flex flex-row">
         <div className="flex flex-col mr-10 w-52">
-        {product.imageSrcs?.map((image, index) => {
+        {product?.imageSrcs?.map((image, index) => {
             return (
                 <img key={index} src={image.image} className='w-full mb-2 cursor-pointer rounded-2xl mr-0' alt="Vintage Furnature" onClick={e => change(e, image.image)} style={{border: (image.image === theImg) ? 'solid 3px black': 'solid 3px white' }} />
             )
