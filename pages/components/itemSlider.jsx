@@ -10,7 +10,7 @@ const ItemSlider = ({products}) => {
             perPage: 3,
         }}>
             
-        {products.map((product, index) => {
+        {products?.map((product, index) => {
             return (
                 <SplideSlide key={index}>
                     <Link href={`/product/${product.slug}`}>

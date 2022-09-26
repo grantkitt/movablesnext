@@ -80,7 +80,7 @@ export default function Home({}) {
   return (
     <div>
       <WomanHeader/>
-      <ItemSlider products={prodys}/>
+      <ItemSlider products={prodys} />
       <DogSlide/>
       <EmailSection/>
       <Footer/>

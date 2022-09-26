@@ -4,7 +4,7 @@ const CatalogDisplay = ({products}) => {
     <div className="py-10">
         <h1 className='text-center font-bold text-5xl mb-10'>Catalog</h1>
         <div className="grid grid-cols-3 w-2/3 gap-16 mx-auto mb-20">
-            {products.map((product, index) => {
+            {products?.map((product, index) => {
                 return(
                     <Link href={`/product/${product.slug}`} key={index}>
                     <div className='h-80'>
