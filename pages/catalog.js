@@ -1,6 +1,5 @@
-import ProductBar from '../components/productBar'
+import CatalogBar from '../components/catalogBar';
 import CatalogDisplay from '../components/CatalogDisplay'
-import { useEffect, useState } from 'react'
 import { postToShopify } from '../utils/shopify';
 
 export async function getStaticProps() {
@@ -117,7 +116,7 @@ export default function Catalog({products}) {
   // )
   return (
     <div>
-        <ProductBar/>
+        <CatalogBar/>
         <CatalogDisplay products={products}/>
     </div>
   )

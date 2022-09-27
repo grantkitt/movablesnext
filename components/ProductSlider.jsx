@@ -13,7 +13,20 @@ const ProductSlider = ({products}) => {
         })} */}
         <Splide options={{
             perPage: 3,
-        }}>
+        }} className='hidden lg:flex'>
+            {products?.map((product, index) => {
+                return (
+                    <SplideSlide key={index} >
+                        <Link href={`/product/${product.slug}`}>
+                        <img src={product.imageSrc} alt="carousel item" className='h-80 rounded-2xl border-black border-4 mx-auto'/>
+                        </Link>
+                    </SplideSlide>
+                )
+            })}
+        </Splide>
+        <Splide options={{
+            perPage: 1,
+        }} className='flex lg:hidden'>
             {products?.map((product, index) => {
                 return (
                     <SplideSlide key={index} >

@@ -1,5 +1,5 @@
 // import { useEffect } from "react";
-import ProductBar from "../../components/productBar";
+import CatalogBar from "../../components/catalogBar";
 import ProductDisplay from "../../components/productDisplay";
 import ProductSlider from "../../components/ProductSlider"
 import { postToShopify } from "../../utils/shopify";
@@ -160,7 +160,7 @@ export async function getStaticProps(...args) {
   export default function ProductPage({product, products}) {
     return (
       <div>
-         <ProductBar/>
+         <CatalogBar/>
          <ProductDisplay product={product}/>
          <ProductSlider products={products}/>
       </div>
