@@ -17,7 +17,7 @@ const CatalogBar = () => {
             </div>
             </Link>
             
-            <input type="text" placeholder='search name, type, genre' className='border-none h-8 my-auto w-72 pl-2 rounded-md active:border-none ml-2 xl:ml-auto mr-5 '/>
+            <input type="text" placeholder='search name, type, genre' className='border-none h-8 my-auto w-72 pl-2 rounded-md active:border-none ml-2 xl:ml-auto mr-5 bg-white'/>
             <div className="lg:flex lg:flex-row my-auto text-2xl font-bold hidden">
               <Link href="/catalog"><h3 className="mr-10">Catalog</h3></Link>
                 <Link href="/contact"><h3 className="mr-10">Contact</h3></Link>

@@ -17,7 +17,7 @@ const ProductBar = () => {
             </div>
             </Link>
             
-            <input type="text" placeholder='search name, type, genre' className='border-none h-8 my-auto w-72 pl-2 rounded-md active:border-none ml-auto mr-5 lg:mr-24 hidden lg:flex'/>
+            <input type="text" placeholder='search name, type, genre' className='border-none h-8 my-auto bg-white w-72 pl-2 rounded-md active:border-none ml-auto mr-5 lg:mr-24 hidden lg:flex'/>
             <div className="flex flex-row my-auto text-xl lg:text-2xl font-bold ">
               <Link href="/catalog"><h3 className="lg:mr-10 mr-5 cursor-pointer">Catalog</h3></Link>
                 <Link href="/contact"><h3 className="lg:mr-10 mr-5 cursor-pointer">Contact</h3></Link>
