@@ -7,7 +7,7 @@ const CatalogDisplay = ({products}) => {
             {products?.map((product, index) => {
                 return(
                     <Link href={`/product/${product.slug}`} key={index}>
-                    <div className='h-80 lg:mb-32'>
+                    <div className='h-80 lg:mb-32 text-black'>
                         <img src={product.imageSrc} alt="one of the many images" className='border-4 border-black rounded-xl shadow-2xl'/>
                         <h3 className='text-3xl text-medium mt-2'>{product.title}</h3>
                         <h5 className='text-xl'>${product.price}</h5>
