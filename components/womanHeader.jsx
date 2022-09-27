@@ -14,7 +14,7 @@ const WomanHeader = () => {
         <h1 className="font-bold text-7xl text-orange-200 h-14 drop-shadow-xl">Movables</h1>
         <h2 className="font-bold text-6xl text-blue-200 ml-52 text-shadow-2xl drop-shadow-xl">ATX</h2>
         <Link href="/catalog">
-        <p className="mt-4 p-5 bg-orange-200 rounded-xl w-52 mx-auto text-3xl font-semibold shadow-lg cursor-pointer">Shop Now</p>
+        <p className="mt-4 p-5 bg-orange-200 rounded-xl w-52 mx-auto text-3xl font-semibold shadow-lg cursor-pointer text-black">Shop Now</p>
         </Link>
       </div>
       <div className="pb-14 lg:pb-60 xl:pb-96"></div>
