@@ -16,19 +16,19 @@ const types = [
 const Footer = () => {
   return (
     <div className="bg-orange-200 pb-16">
-        <div className="flex flex-row px-32 py-12">
+        <div className="flex flex-col lg:flex-row lg:px-32 py-12">
         {types.map((type, index) => {
             return (
                 <div className="w-96 mx-auto" key={index}>
-                    <h4 className="text-center text-2xl font-semibold h-12">{type.type}</h4>
-                    <img src={type.image} alt={type.type} className='rounded-xl shadow-2xl h-96' />
+                    <h4 className="text-center text-xl lg:text-2xl font-semibold lg:h-12 h-8 lg:mb-5">{type.type}</h4>
+                    <img src={type.image} alt={type.type} className='rounded-xl shadow-2xl h-52 mx-auto mb-10 lg:h-60 xl:h-96' />
                 </div>
             );
         })}
         </div>
         <div className="flex flex-row text-center">
             <h2 className="text-3xl font-semibold ml-auto">Contact</h2>
-            <h2 className="text-3xl font-semibold mx-20">Catalog</h2>
+            <h2 className="text-3xl font-semibold mx-10 lg:mx-20">Catalog</h2>
             <h2 className="text-3xl font-semibold mr-auto">About</h2>
         </div>
         <p className="text-center text-gray-600 text-lg mt-5">Copyright MovablesATX. All rights reserved.</p>
