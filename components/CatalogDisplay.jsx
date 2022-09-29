@@ -20,7 +20,7 @@ const CatalogDisplay = ({products, search, handleClick}) => {
                                 <h5 className='text-xl'>${product.price}</h5>
                             </div>
                             </Link>
-                        )
+                        ) // h
                     })}
                 </div>
     if (prodys.length == 0) {
