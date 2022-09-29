@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 const ProductSlider = ({products}) => {
   return (
-    <div className="pl-8 pr-8 pb-10">
+    <div className="px-5 pb-10">
         <h1 className='text-center font-bold text-4xl mb-10'>Continue Shopping!</h1>
         {/* {products.map(product => {
             return (
@@ -31,7 +31,7 @@ const ProductSlider = ({products}) => {
                 return (
                     <SplideSlide key={index} >
                         <Link href={`/product/${product.slug}`}>
-                        <img src={product.imageSrc} alt="carousel item" className='h-80 rounded-2xl border-black border-4 mx-auto'/>
+                        <img src={product.imageSrc} alt="carousel item" className='w-full rounded-2xl border-black border-4 mx-auto'/>
                         </Link>
                     </SplideSlide>
                 )

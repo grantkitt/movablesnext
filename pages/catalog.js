@@ -1,7 +1,7 @@
 import CatalogBar from '../components/catalogBar';
 import CatalogDisplay from '../components/CatalogDisplay'
 import { postToShopify } from '../utils/shopify';
-
+import { useState } from 'react';
 export async function getStaticProps() {
   const res = await postToShopify({
     query: `
@@ -78,46 +78,20 @@ export async function getStaticProps() {
 }
 
 export default function Catalog({products}) {
-  // const [isLoading, setIsLoading] = useState(true)
-  // const [prodys, setProdys] = useState(null)
-  // useEffect(() => {
-  //   async function fetchProducts() {
-  //     const res = await fetch('/api/products');
-
-  //     if (!res.ok) {
-  //       console.error(res);
-  //       return {props: {}}
-  //     }
-  //     //filter on quantity is over 0
-
-  //     const data = await res.json();
-
-  //     const products = data.data.products.edges.map(({node}) => {
-  //       if (node.totalInventory <= 0 ) {
-  //         return false;
-  //       }
-  //       return {
-  //         id: node.id,
-  //         title: node.title,
-  //         description: node.description,
-  //         imageSrc: node.images.edges[0].node.src,
-  //         imageAlt: node.title,
-  //         price: node.variants.edges[0].node.priceV2.amount,
-  //         slug: node.handle,
-  //       }
-  //     }).filter(Boolean)
-  //     setProdys(products)
-  //     setIsLoading(false)
-  //   }
-  //   fetchProducts()
-  // }, [])
-  // if (isLoading) return (
-  //   <div>Loading mf</div>
-  // )
+  const [search, setSearch] = useState('')
+  const handleClick = (e) => {
+    setSearch('')
+  }
+  const searchFunc = (e) => {
+    if( e.key === 'Enter') {
+      setSearch(e.target.value)
+      console.log(search)
+    }
+  }
   return (
     <div>
-        <CatalogBar/>
-        <CatalogDisplay products={products}/>
+        <CatalogBar searchFunc={searchFunc}/>
+        <CatalogDisplay search={search} products={products} handleClick={handleClick}/>
     </div>
   )
 }
